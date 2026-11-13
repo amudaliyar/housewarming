@@ -12,7 +12,10 @@
 <meta property="og:url" content="https://amudaliyar.github.io/housewarming/">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#F6E7C8">
+<link rel="preload" as="image" href="card.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="ganesha.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Mukta+Malar:wght@500;600&display=swap" rel="stylesheet">
 <style>
   :root { --maroon:#8E1B2C; --deep:#6E1422; --gold:#D9A23A; --gold2:#F6D77A; --green:#2E6B3F; }
@@ -45,7 +48,7 @@
   .env { position: relative; width: min(82vw, 340px); aspect-ratio: 1.42; filter: drop-shadow(0 18px 28px rgba(110,20,34,.28)); animation: float 3.2s ease-in-out infinite; }
   .opening .env { animation: none; }
   .env-back { position: absolute; inset: 0; background: linear-gradient(160deg, #A3243A, var(--deep)); border-radius: 10px; }
-  .env-card { position: absolute; left: 7%; width: 86%; top: 6%; height: 92%; border-radius: 6px; background: #fff url(card.png) center top / cover; transition: transform 1.1s cubic-bezier(.3,.9,.3,1) .55s; z-index: 1; }
+  .env-card { position: absolute; left: 7%; width: 86%; top: 6%; height: 92%; border-radius: 6px; background: #fff url(card.jpg) center top / cover; transition: transform 1.1s cubic-bezier(.3,.9,.3,1) .55s; z-index: 1; }
   .opening .env-card { transform: translateY(-62%); }
   .env-front { position: absolute; inset: 0; z-index: 2; border-radius: 10px; overflow: hidden; pointer-events: none; }
   .env-front svg, .env-flap svg { width: 100%; height: 100%; display: block; overflow: visible; }
@@ -79,7 +82,7 @@
   .rod { position: relative; height: 26px; margin: 0 -18px; border-radius: 13px; background: linear-gradient(#F6D77A, #C88E2A 45%, #8A5A10 80%, #C88E2A); box-shadow: 0 4px 8px rgba(0,0,0,.25); z-index: 2; }
   .rod::before, .rod::after { content: ""; position: absolute; top: -5px; width: 18px; height: 36px; border-radius: 9px; background: radial-gradient(circle at 40% 35%, #FBE6A6, #9C6A12); }
   .rod::before { left: -10px; } .rod::after { right: -10px; }
-  .paper { height: 34px; overflow: hidden; background: #FFF9EC url(card.png) center top / 100% auto; transition: height 2s cubic-bezier(.5,0,.3,1) .5s; box-shadow: inset 0 8px 10px -6px rgba(0,0,0,.25), inset 0 -8px 10px -6px rgba(0,0,0,.25); }
+  .paper { height: 34px; overflow: hidden; background: #FFF9EC url(card.jpg) center top / 100% auto; transition: height 2s cubic-bezier(.5,0,.3,1) .5s; box-shadow: inset 0 8px 10px -6px rgba(0,0,0,.25), inset 0 -8px 10px -6px rgba(0,0,0,.25); }
   .tie { position: absolute; left: 50%; top: 50%; width: 64px; height: 64px; margin: -32px; z-index: 3; transition: transform .6s ease-in, opacity .5s; }
   .tie .band { position: absolute; left: 24px; top: -30px; width: 16px; height: 124px; background: linear-gradient(90deg, #A3243A, #D63C5A, #A3243A); }
   .tie .seal { top: 0; left: 0; margin: 0; width: 64px; height: 64px; }
@@ -149,7 +152,7 @@
 <!-- CARD -->
 <main id="main" aria-hidden="true">
   <div class="cardbox">
-    <img class="card" src="card.png" alt="Housewarming invitation of Rameshkumar and Usharani, Friday 20 November 2026, 7:30 AM to 10:00 AM">
+    <img class="card" src="card.jpg" alt="Housewarming invitation of Rameshkumar and Usharani, Friday 20 November 2026, 7:30 AM to 10:00 AM">
     <span class="vglow" aria-hidden="true"></span>
     <a class="venue-hit maplink" target="_blank" rel="noopener" aria-label="Venue – tap to open in Google Maps"></a>
     <span class="hint" aria-hidden="true">👆 Tap for map</span>
@@ -158,7 +161,7 @@
   <div class="count" id="count"></div>
   <div class="btns">
     <a class="btn" id="cal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Add to Calendar</a>
-    <a class="btn" href="card.png" download="Housewarming Invitation.png"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>Save Card</a>
+    <a class="btn" href="card.jpg" download="Housewarming Invitation.jpg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 20h16"/></svg>Save Card</a>
   </div>
   <div class="bless">With love &amp; blessings<small>உங்கள் வருகையை அன்புடன் எதிர்நோக்குகிறோம்</small></div>
   <button id="replay">OPEN AGAIN</button>
