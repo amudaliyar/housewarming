@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>You're Invited · Housewarming Invitation</title>
 <meta property="og:title" content="You're Invited · Housewarming Invitation">
-<meta property="og:description" content="Friday, 20 November 2026 · 7:30 AM – 9:00 AM">
+<meta property="og:description" content="Friday, 20 November 2026 · 7:30 AM – 10:00 AM">
 <meta property="og:image" content="https://amudaliyar.github.io/housewarming/preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,7 +26,7 @@
   .picker button { border: 0; background: none; padding: 7px 13px; border-radius: 24px; font-weight: 600; font-size: 14px; color: var(--maroon); white-space: nowrap; cursor: pointer; }
   .picker button.on { background: var(--maroon); color: #FFF4D6; }
 
-  .intro { position: fixed; inset: 0; z-index: 5; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 3.6vh; padding: 3vh 16px 76px; transition: opacity .8s ease, visibility .8s; }
+  .intro { position: fixed; inset: 0; z-index: 5; display: none; flex-direction: column; align-items: center; justify-content: center; gap: 3.6vh; padding: 3vh 16px; transition: opacity .8s ease, visibility .8s; }
   .intro.active { display: flex; }
   .intro.gone { opacity: 0; visibility: hidden; }
   .hello { text-align: center; transition: opacity .5s; }
@@ -87,7 +87,7 @@
   .opening .tie { transform: translateY(80px) rotate(25deg); opacity: 0; }
 
   /* ================= CARD ================= */
-  #main { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; padding: 14px 12px 90px; gap: 20px; opacity: 0; transform: scale(.94); transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.8,.2,1); pointer-events: none; }
+  #main { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; padding: 14px 12px 40px; gap: 20px; opacity: 0; transform: scale(.94); transition: opacity 1s ease, transform 1.1s cubic-bezier(.2,.8,.2,1); pointer-events: none; }
   #main.show { opacity: 1; transform: none; pointer-events: auto; }
   .cardbox { position: relative; width: min(100%, 560px, calc((100vh - 28px) * .6171)); width: min(100%, 560px, calc((100dvh - 28px) * .6171)); container-type: inline-size; }
   .card { display: block; width: 100%; height: auto; border-radius: 10px; box-shadow: 0 16px 40px rgba(110,20,34,.25), 0 0 0 1px rgba(217,162,58,.4); }
@@ -118,12 +118,6 @@
 </head>
 <body>
 
-<nav class="picker" aria-label="Opening style">
-  <button data-s="envelope">✉️ Envelope</button>
-  <button data-s="doors">🚪 Temple Doors</button>
-  <button data-s="scroll">📜 Scroll</button>
-</nav>
-
 <!-- ENVELOPE -->
 <section class="intro" id="envelope">
   <div class="hello"><div class="ta">புதுமனை புகுவிழா</div><div class="scr">You're Invited</div><div class="cap">HOUSEWARMING INVITATION</div></div>
@@ -152,37 +146,10 @@
   <div class="tap">TAP TO OPEN</div>
 </section>
 
-<!-- TEMPLE DOORS -->
-<section class="intro opener" id="doors" role="button" tabindex="0" aria-label="Open the doors to see the invitation">
-  <div class="hello"><div class="ta">புதுமனை புகுவிழா</div><div class="scr">You're Invited</div><div class="cap">HOUSEWARMING INVITATION</div></div>
-  <div class="portal">
-    <div class="doorway">
-      <div class="door l"><svg viewBox="0 0 200 590" preserveAspectRatio="none" class="dsvg"></svg></div>
-      <div class="door r"><svg viewBox="0 0 200 590" preserveAspectRatio="none" class="dsvg" style="transform:scaleX(-1)"></svg></div>
-    </div>
-    <div class="frame"><svg viewBox="0 0 330 500" preserveAspectRatio="none" id="frame"></svg></div>
-    <svg class="thor" id="thor" viewBox="0 0 240 55" preserveAspectRatio="none"></svg>
-    <div class="gmed"><img src="ganesha.png" alt=""></div>
-  </div>
-  <div class="tap">TAP TO OPEN THE DOORS</div>
-</section>
-
-<!-- SCROLL -->
-<section class="intro" id="scroll">
-  <div class="hello"><div class="ta">புதுமனை புகுவிழா</div><div class="scr">You're Invited</div><div class="cap">HOUSEWARMING INVITATION</div></div>
-  <div class="scroll opener" role="button" tabindex="0" aria-label="Unroll the invitation">
-    <div class="rod"></div>
-    <div class="paper" id="paper"></div>
-    <div class="rod"></div>
-    <div class="tie"><div class="band"></div><div class="seal"><img src="ganesha.png" alt=""></div></div>
-  </div>
-  <div class="tap">TAP TO UNROLL</div>
-</section>
-
 <!-- CARD -->
 <main id="main" aria-hidden="true">
   <div class="cardbox">
-    <img class="card" src="card.png" alt="Housewarming invitation of Rameshkumar Mudaliyar and Usharani Mudaliyar, Friday 20 November 2026, 7:30 AM to 9:00 AM">
+    <img class="card" src="card.png" alt="Housewarming invitation of Rameshkumar Mudaliyar and Usharani Mudaliyar, Friday 20 November 2026, 7:30 AM to 10:00 AM">
     <span class="vglow" aria-hidden="true"></span>
     <a class="venue-hit maplink" target="_blank" rel="noopener" aria-label="Venue – tap to open in Google Maps"></a>
     <span class="hint" aria-hidden="true">👆 Tap for map</span>
@@ -203,7 +170,7 @@
 /* ======= EDIT THESE ======= */
 const EVENT = {
   title: 'Housewarming – Rameshkumar & Usharani Mudaliyar',
-  startUTC: '20261120T020000Z', endUTC: '20261120T033000Z',   // 7:30–9:00 AM IST
+  startUTC: '20261120T020000Z', endUTC: '20261120T043000Z',   // 7:30–10:00 AM IST
   dateIST: '2026-11-20T07:30:00+05:30',
   address: '56, 57, Satva Vanam, Vanthvadi, Mehmedabad, Kheda – 387130',
   mapsLink: 'https://maps.google.com/?cid=11790735034015099581'      // paste the Google Maps share link here (otherwise the address is searched)
@@ -226,69 +193,6 @@ document.getElementById('cal').href = 'https://calendar.google.com/calendar/rend
   else el.innerHTML = `<div class="lbl">THANK YOU FOR YOUR BLESSINGS</div>`;
 })();
 
-/* ---------- temple door art ---------- */
-(function () {
-  const stud = (x, y, r) => `<circle cx="${x}" cy="${y}" r="${r}" fill="url(#br)"/><circle cx="${x - r * .3}" cy="${y - r * .3}" r="${r * .35}" fill="#FFF3C4" opacity=".8"/>`;
-  const lotus = (cx, cy, R) => {
-    let s = `<circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="url(#br)" stroke-width="3"/>`;
-    for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, x = cx + Math.cos(a) * R * .52, y = cy + Math.sin(a) * R * .52;
-      s += `<ellipse cx="${x}" cy="${y}" rx="${R * .34}" ry="${R * .15}" transform="rotate(${i * 45} ${x} ${y})" fill="url(#br)"/>`; }
-    return s + `<circle cx="${cx}" cy="${cy}" r="${R * .2}" fill="#C62839" stroke="url(#br)" stroke-width="2"/>`;
-  };
-  const panel = (y, h) => `<rect x="22" y="${y}" width="156" height="${h}" rx="8" fill="#5A2A10" stroke="#3E1C08" stroke-width="3"/>
-      <rect x="32" y="${y + 10}" width="136" height="${h - 20}" rx="6" fill="url(#pw)" stroke="url(#br)" stroke-width="1.5"/>
-      ${lotus(100, y + h / 2, 40)}${[[46, y + 22], [154, y + 22], [46, y + h - 22], [154, y + h - 22]].map(([x, yy]) => stud(x, yy, 4)).join('')}`;
-  let grain = '', studs = '';
-  for (let i = 0; i < 18; i++) grain += `<path d="M${8 + i * 11} 0 Q${12 + i * 11} 300 ${6 + i * 11} 590" stroke="#3E1C08" stroke-width=".7" opacity=".25" fill="none"/>`;
-  for (let y = 18; y < 590; y += 40) studs += stud(10, y, 4.5);
-  const art = `<defs>
-      <linearGradient id="wd" x1="0" x2="1"><stop offset="0" stop-color="#5A2A10"/><stop offset=".5" stop-color="#7E4220"/><stop offset="1" stop-color="#5A2A10"/></linearGradient>
-      <linearGradient id="pw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8A4A22"/><stop offset="1" stop-color="#6B3417"/></linearGradient>
-      <radialGradient id="br" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FBE6A6"/><stop offset=".5" stop-color="#D9A23A"/><stop offset="1" stop-color="#8A5A10"/></radialGradient></defs>
-    <rect width="200" height="590" fill="url(#wd)"/>${grain}
-    <rect x="2" y="2" width="196" height="586" fill="none" stroke="#3E1C08" stroke-width="4"/>
-    <line x1="199" y1="0" x2="199" y2="590" stroke="#2A1205" stroke-width="2"/>
-    ${studs}${panel(28, 230)}
-    <rect x="22" y="272" width="156" height="12" rx="3" fill="url(#br)"/>
-    ${panel(298, 264)}
-    <circle cx="180" cy="300" r="12" fill="none" stroke="url(#br)" stroke-width="4.5"/>${stud(180, 286, 6)}`;
-  document.querySelectorAll('.dsvg').forEach(s => s.innerHTML = art);
-
-  let f = `<defs><radialGradient id="fb" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FBE6A6"/><stop offset=".5" stop-color="#D9A23A"/><stop offset="1" stop-color="#8A5A10"/></radialGradient>
-      <linearGradient id="fw" x1="0" x2="1"><stop offset="0" stop-color="#4A2210"/><stop offset=".5" stop-color="#6E3618"/><stop offset="1" stop-color="#4A2210"/></linearGradient>
-      <linearGradient id="lw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6E3618"/><stop offset="1" stop-color="#3E1C08"/></linearGradient>
-      <linearGradient id="st" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EAD9B8"/><stop offset="1" stop-color="#BFA57A"/></linearGradient>
-      <radialGradient id="dfl" cx=".5" cy=".7" r=".6"><stop offset="0" stop-color="#FFF8D0"/><stop offset=".5" stop-color="#FFC93C"/><stop offset="1" stop-color="#F5871F"/></radialGradient>
-      <radialGradient id="dgl" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFE9A8" stop-opacity=".9"/><stop offset="1" stop-color="#FFE9A8" stop-opacity="0"/></radialGradient></defs>`;
-  [[22, 45], [263, 45]].forEach(([x, w]) => {
-    f += `<rect x="${x}" y="96" width="${w}" height="362" fill="url(#fw)" stroke="#2A1205" stroke-width="2"/>
-      <rect x="${x + 7}" y="104" width="${w - 14}" height="346" fill="none" stroke="url(#fb)" stroke-width="1.6"/>`;
-    for (let y = 124; y < 450; y += 34) f += `<path d="M${x + w / 2} ${y - 9} l7 9 l-7 9 l-7 -9z" fill="url(#fb)"/>`;
-  });
-  f += `<path d="M6 108 L324 108 L324 88 L300 88 L300 70 L30 70 L30 88 L6 88 Z" fill="url(#lw)" stroke="#2A1205" stroke-width="2"/>
-    <path d="M110 70 Q165 6 220 70 Z" fill="url(#lw)" stroke="#2A1205" stroke-width="2"/>
-    <path d="M122 70 Q165 20 208 70" fill="none" stroke="url(#fb)" stroke-width="2"/>
-    <path d="M165 4 l4 10 l-4 6 l-4 -6z" fill="url(#fb)"/>
-    <rect x="30" y="80" width="270" height="3" fill="url(#fb)"/><rect x="6" y="100" width="318" height="3" fill="url(#fb)"/>`;
-  for (let x = 40; x < 300; x += 18) f += `<circle cx="${x}" cy="91" r="3" fill="url(#fb)"/>`;
-  f += `<rect x="12" y="458" width="306" height="16" fill="url(#st)" stroke="#9C8460" stroke-width="1"/>
-    <rect x="0" y="474" width="330" height="22" rx="2" fill="url(#st)" stroke="#9C8460" stroke-width="1"/>
-    <path d="M30 466 h270" stroke="#C62839" stroke-width="2" stroke-dasharray="2 6"/>`;
-  [[40, 470], [290, 470]].forEach(([x, y]) => f += `<circle cx="${x}" cy="${y - 16}" r="16" fill="url(#dgl)"/>
-    <path class="flame" d="M${x} ${y - 24} C${x + 4} ${y - 16} ${x + 4} ${y - 11} ${x} ${y - 8} C${x - 4} ${y - 11} ${x - 4} ${y - 16} ${x} ${y - 24}Z" fill="url(#dfl)"/>
-    <path d="M${x - 13} ${y - 8} Q${x} ${y + 6} ${x + 13} ${y - 8} Z" fill="url(#fb)" stroke="#8A5A10" stroke-width=".8"/>`);
-  document.getElementById('frame').innerHTML = f;
-
-  let m = '';
-  for (let x = 4; x <= 240; x += 12) m += `<path d="M${x} 2 q5 14 0 22 q-5 -8 0 -22z" fill="#3E8E41" stroke="#2E6B3F" stroke-width=".6"/>`;
-  const cols = ['#F5871F', '#FFC93C', '#F5871F', '#C2185B'];
-  for (let k = 0; k < 3; k++) for (let i = 0; i <= 10; i++) {
-    const u = i / 10; m += `<circle cx="${k * 80 + u * 80}" cy="${5 + Math.sin(u * Math.PI) * 16}" r="4.2" fill="${cols[(i + k) % 4]}" stroke="rgba(0,0,0,.12)" stroke-width=".5"/>`;
-  }
-  for (let k = 0; k <= 3; k++) m += `<line x1="${k * 80}" y1="8" x2="${k * 80}" y2="40" stroke="#F5871F" stroke-width="5" stroke-dasharray="4 1.5"/><circle cx="${k * 80}" cy="44" r="3.4" fill="#C2185B"/><circle cx="${k * 80}" cy="6" r="6" fill="#E65100"/><circle cx="${k * 80}" cy="6" r="2.6" fill="#FFC93C"/>`;
-  document.getElementById('thor').innerHTML = m;
-})();
-
 /* ---------- petals ---------- */
 function petals(n = 60) {
   const box = document.getElementById('petals');
@@ -302,18 +206,16 @@ function petals(n = 60) {
 }
 
 /* ---------- flow ---------- */
-const STYLES = ['envelope', 'doors', 'scroll'];
+const STYLES = ['envelope'];
 const TIMING = { envelope: 2000, doors: 2700, scroll: 2900 };
 const main = document.getElementById('main');
-let cur = 'doors', opened = false;
+let cur = 'envelope', opened = false;
 
 function show(style, skip) {
-  cur = STYLES.includes(style) ? style : 'doors';
+  cur = 'envelope';
   opened = false;
-  document.querySelectorAll('.picker button').forEach(b => b.classList.toggle('on', b.dataset.s === cur));
   document.querySelectorAll('.intro').forEach(el => el.classList.remove('active', 'gone', 'opening'));
   main.classList.remove('show'); main.setAttribute('aria-hidden', 'true');
-  document.getElementById('paper').style.height = '';
   const sec = document.getElementById(cur);
   sec.classList.add('active');
   if (skip) { sec.classList.add('opening', 'gone'); main.classList.add('show'); main.setAttribute('aria-hidden', 'false'); }
@@ -323,7 +225,6 @@ function openInvite() {
   if (opened) return; opened = true;
   const sec = document.getElementById(cur);
   sec.classList.add('opening');
-  if (cur === 'scroll') { const p = document.getElementById('paper'); p.style.height = Math.min(p.offsetWidth * 1400 / 864, innerHeight * .6) + 'px'; }
   setTimeout(petals, TIMING[cur] - 1100);
   setTimeout(() => { sec.classList.add('gone'); main.classList.add('show'); main.setAttribute('aria-hidden', 'false'); window.scrollTo(0, 0); }, TIMING[cur]);
 }
@@ -331,7 +232,6 @@ document.querySelectorAll('.opener').forEach(o => {
   o.addEventListener('click', openInvite);
   o.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openInvite(); } });
 });
-document.querySelectorAll('.picker button').forEach(b => b.addEventListener('click', () => { location.hash = b.dataset.s; }));
 document.getElementById('replay').addEventListener('click', () => show(cur));
 function route() { const h = location.hash.slice(1); show(h.replace(/-card$/, ''), h.endsWith('-card')); }
 window.addEventListener('hashchange', route);
